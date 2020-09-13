@@ -1,0 +1,52 @@
+Assignment 2
+
+--------------------------------------------------------------------------------------------------------------------
+
+Build two grids which are each X wide and Y long where X and Y are user inputs to determine the size of the grids.  Fill each cell of both grids with a ‘0’.  Randomly fill 1/3rd of the grid’s cells with a ‘1’.  You must randomly fill each of the two grids separately so they do not have all the same squares filled with ‘1’.  Compare the two grids (square by square comparison) to find squares which have a ‘1’ in both grids.  Create a third grid which contains a ‘1’ in squares where both of the compared grids contain a ‘1’ and has a ‘0’ in any other square.
+
+ 
+
+Example in a 2 by 2 grid:
+
+0	0
+1	1
+Grid 1                         
+
+ 
+
+1	0
+1	0
+Grid 2                         
+
+ 
+
+0	0
+1	0
+Grid 3 (Result)
+
+ 
+
+For this assignment, you will need to create a Grid Class and the appropriate methods to perform the above operations.
+
+ 
+
+Also, please demonstrate the usage of the Grid class and its methods from main function.
+
+ 
+
+Documenting and submitting programs
+
+This assignment should be submitted electronically before the due date and time. We're going to use Canvas file upload system for submission. Click the link at the respective module page in Canvas.
+
+Each programming assignment should include
+
+your source code and makefile (makefile all lowercase, not .txt, not cmake)
+a README file documenting, briefly
+your name and student ID
+the structure of your program (both file organization and high-level functional organization)
+the status of your program (e.g. it works completely, it compiles but doesn't run, it compiles and runs but doesn't work in certain cases, some features are missing etc.)
+what hardware platform(s) you tested it on.  
+how to compile the program (e.g. "run 'make' using the submitted makefile") and how to run it.
+Do not include binary files.
+Create a directory, put all files in it, and name the directory "nameHWn", where name is your last name (if duplicate in the class use lastnameFirstInitial, and an n stands for the homework number . For example, if you're submitting homework 3 and your name is Debnath, the directory name should be debnathHW1.
+ 
