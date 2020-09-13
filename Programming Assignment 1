@@ -1,0 +1,73 @@
+Programming Assignment 1
+
+ 
+
+In this assignment, you will implement two classes.
+
+Point: A Point in a two dimensional plane has an integer x coordinate value and an integer y coordinate value.
+Rectangle: A Rectangle is a class that has three attributes: 1) Point type data that represent the top-left point of the rectangle, 2) integer length and 3) integer width.
+1. Write the appropriate class definition for Point class and Rectangle class with necessary constructors, mutator and accessor functions.
+
+2. Write a function that will take two objects of Rectangle class as parameter and return whether they intersect or not.
+
+3. Write a main function that will take inputs from user for two rectangles. Each rectangle requires 4 set of inputs: 1) x of top-left point, 2) y of top-left point, 3) length and 4) width.  The main function will return the 4 set of coordinate values of the rectangles and whether they intersect or not. Print the 4 set of co-ordinate values of a rectangle in the following order:
+
+Top-left point
+Bottom-left point
+Bottom-right point
+Top-right point
+ 
+
+Sample Input:
+
+x of rectangle 1: 2
+
+y of rectangle 1: 4
+
+length of rectangle 1: 2
+
+width of rectangle 1: 3
+
+ x of rectangle 2: 4
+
+y of rectangle 2: 3
+
+length of rectangle 2: 2
+
+width of rectangle 2: 3
+
+ 
+
+ 
+
+ 
+
+ 
+
+Sample Output:
+
+Co-ordinates of rectangle 1: (2,4), (2,2), (5,2), (5,4)
+
+Co-ordinates of rectangle 2: (4,3), (4,1), (7,1), (7,3)
+
+They intersect.
+
+ 
+
+Submission instruction:
+
+Documenting and submitting programs
+
+This assignment should be submitted electronically before the due date and time. We're going to use Canvas file upload system for submission. Click the link at the respective module page in Canvas. Each programming assignment should include
+
+your source code and Makefile (Makefile all lowercase, not .txt, not cmake)
+a README file documenting, briefly
+ ▪ your name and student ID
+
+ ▪ the structure of your program (both file organization and high-level functional organization)
+
+▪ the status of your program (e.g. it works completely, it compiles but doesn't run, it compiles and runs but doesn't work in certain cases, some features are missing etc.)
+
+Create a directory, put all files in it, and name the directory "nameHWn", where name is your last name (if duplicate in the class use lastnameFirstInitial, and an n stands for the homework number . For example, if you're submitting homework 1 and your id is 1234, the directory name should be nameHW1
+All homework will be tested and graded with GCC 4.8 or later on csegrid.ucdenver.pvt. If it runs fine on that platform, you'll get full credit. You can remotely access the CSE Linux server (csegrid.ucdenver.pvt) with putty or mac ssh.
+ 
