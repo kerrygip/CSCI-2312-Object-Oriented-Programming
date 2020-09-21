@@ -1,0 +1,235 @@
+1. If, in a class, one uses the keyword public:, 
+it aﬀects all the members that immediately follow the keyword public until the next access speciﬁer or end of block, 
+making the members accessible to any other function deﬁned anywhere.
+T -> F
+
+2. A class type cannot be used in some ways that a built-in type can be used.
+F
+
+3. Every class definition must have a constructor. Otherwise we cannot create an object of that class. ??? the constructor is built 
+automatically when object is called?
+T??
+
+4.A constructor is like a function. It can return any type value needed.
+F 
+
+5. The value of the static variable is shared between all objects of the same class.
+T 
+
+6.An object of a Class cannot change the value of the static variable of the Class.
+T
+
+7. Consider the following class definition:
+
+class A
+{
+public:
+    A():xx(0),yy(0){}
+    A(int x,char y):xx(x),yy(y) {}
+private:
+    int xx;
+    char yy;
+};
+Which of the following statements (in main function) are legal according to the class definition (Choose all that apply). 
+Note that, multiple answers are possible.
+
+
+A x(2, ‘A’); - X
+
+A x;  - X
+
+A x = A(2, ‘A’);  - X 
+
+A x(1);
+
+A x();  
+
+
+8. class A
+{
+public:
+   A(): x(0),y(0){}
+   A(int _x, int _y):x(_x), y(_y){}
+private:
+    int x;
+    static int y;
+};
+n the class definition of A, 
+the default constructor definition "A()"  is legal (Will not create any syntax error).
+F - calling a static definition
+
+
+9. Consider the class definition of A (from question 8),  
+the parameterized constructor definition "A(int _x, int _y)"  is legal (Will not create any syntax error).
+F
+
+
+10. Consider the class definition of A (from question 8). If you think that the default constructor definition has incorrect syntax,  
+Please write the correct definition of default constructor of Class A.
+
+#include <iostream>using namespace std;
+// just remove the y parameter
+class A
+{
+public:
+    A(): x(0),{}
+   A(int _x, int _y):x(_x), y(_y){}
+private:
+    int x;
+    static int y;
+};main(){}
+
+
+11. Consider the class definition of A (from question 8). If you think that the parameterized constructor definition has incorrect syntax,  
+Please write the correct definition of parameterized constructor of Class A.
+
+
+#include<iostream>
+using namespace std;
+// just removed the y parameter
+class A
+{
+public:
+   A(): x(0){}
+   A(int _x):x(_x){}
+   
+private:
+    int x;
+    static int y;
+};
+
+int main()
+{
+  
+}
+
+
+12. Consider the following class definition:
+
+class Movie{
+private:
+     string movieName;
+     int year;
+     double imdbRating;
+public:
+      Movie(string name , int y, double i);
+      string getMovieName() const;
+      int getYear() const;
+      double getImdbRating() const;
+      bool operator ==(const Movie& anotherMovie);
+};
+
+
+
+Assume that all the constructor and accessor functions have been defined somewhere properly. 
+Please write the definition of operator overloading function of == operator (as a member function of the class). 
+The operator will return true if the imdb rating of the movie on the left operand 
+is equal to the imdb rating of the movie on the right operand. false, otherwise.
+
+
+
+13. Consider the following class definition:
+class Movie{
+private:
+     string movieName;
+     int year;
+     double imdbRating;
+public:
+      Movie(string name , int y, double i);
+      string getMovieName() const;
+      int getYear() const;
+      double getImdbRating() const;
+      
+};
+
+Assume that all the constructor and accessor functions have been defined somewhere properly. 
+Now you have to write the definition of operator overloading function of == operator as a stand-alone function 
+(Not a member of the Movie class). 
+The operator will return true if the imdb rating of the movie on the left operand 
+is equal to the imdb rating of the movie on the right operand. false, otherwise.
+
+
+
+
+
+14. What is the output?
+#include<iostream>
+using namespace std;
+class A
+{
+private:
+   int i;
+public:
+   A()
+   {
+      cout << "default constructor" << endl;
+      i = 0;
+
+    }
+    A(int _i)
+    {
+       cout << "parameterized constructor" << endl;
+       i =_i;
+     };
+
+};
+int main()
+{
+   A a;
+   return 0;
+}
+
+//default constructor
+
+
+15. What is the output?
+#include<iostream>
+using namespace std;
+class A
+{
+private:
+   int i;
+public:
+   A()
+   {
+      cout << "default constructor" << endl;
+      i = 0;
+
+    }
+    A(int _i)
+    {
+       cout << "parameterized constructor" << endl;
+       i =_i;
+     };
+
+};
+int main()
+{
+   A b(10);
+   return 0;
+}
+
+// parameterized constructor
+
+
+16. What is the output?
+#include<iostream>
+using namespace std;
+class A
+{
+ public:
+   A(){}
+   int getx() {return x;}
+ private:
+   int x = 1000;
+ };
+int main()
+{
+ A w;
+ cout << w.getx ();
+ return 0;
+}
+
+// 1000
+
+
