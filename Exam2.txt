@@ -1,0 +1,249 @@
+1. If a base class constructor is not called explicitly in the definition of a 
+derived class constructor, an error results.
+F
+
+2. Derived class inherits constructors from Base class.
+F
+
+3. We can assign a derived class object to a base class variable.
+F
+
+4. An uncaught exception in C++ is ignored.
+F
+
+5. If an exception is thrown in a function, say, f(), 
+but not handled there, the exception is propagated to the function that called f().
+F? 
+
+6. A program can continue to run after an exception has been thrown and caught.
+T
+
+7.A function uses an exception specification that includes only int, 
+but an exception of type double is thrown. 
+A catch block is provided that catches a double, so things proceed properly.
+F
+
+8. A function does not have an exception specification at all, so exceptions are prohibited.
+F
+
+9. Inheritance provides the ability to reuse objects already defined, 
+perhaps for a different purpose, with modification appropriate to the new purpose.
+T
+
+10. If a class B is a pubic base class for a derived class D, 
+then an object of class D bears what relationship to class B?
+
+
+An is-a - X
+
+A fraternal relationship
+
+A has-a
+
+There is no relationship
+
+
+
+11. Which of the following is correct syntax to declare C++ class B to be a 
+public base class for derived class D
+
+class D : public class B {/* … */};
+
+class D : public B {/* … */}; - X
+
+public base class B: class D {/*…*/};
+
+None of the above
+
+12. Consider the class definition of base class B and derived class D. How many public members does an object of class D have?
+
+class B
+
+{
+
+public:
+
+     B();
+     B(int nn);
+     void f();
+     void g();
+
+private:
+
+     int n;
+
+};
+
+class D: public B
+
+{
+
+public:
+
+     D(int nn, float dd);
+     void h();
+
+private:
+
+     double d;
+
+};
+
+ 
+1
+2
+3
+4 - X
+
+
+
+13. Suppose class Child is derived from class Parent that was in turn derived from class GrandParent. When we declare an object of class Child, three constructors are called:
+
+i) Child, ii) Parent, iii ) GrandParent.. What is the order?
+
+
+Parent, Child, GrandParent 
+
+GrandParent, Parent, Child - X
+
+Child, Parent, GrandParent
+
+Child, GrandParent, Parent
+
+
+14. GrandParent, Parent, Child
+
+Child, Parent, GrandParent - X
+
+GrandParent, Child, Parent
+
+Parent, Child, GrandParent
+
+
+
+15. Which of the following catch block can catch all exception
+
+catch(int)
+
+catch()
+
+catch(...)
+
+None of the above
+
+
+16. Consider the following C++ code. Will the Catch block handle the exception normally?
+#include<iostream>
+using namespace std;
+class B
+{};
+class D:public B
+{};
+int main()
+{
+    try
+    {
+        throw B();
+    }
+    catch(D obj)
+    {
+          cout << "Entering the catch block" << endl;
+    }
+    return 0;
+}
+No
+
+17. Consider the following C++ code. Will the Catch block will handle the exception normally?
+#include<iostream>
+using namespace std;
+class B
+{};
+class D:public B
+{};
+int main()
+{
+    try
+    {
+        throw D();
+    }
+    catch(B obj)
+    {
+          cout << "Entering the catch block" << endl;
+    }
+    return 0;
+}
+
+Yes
+
+18. Consider the following Class definition of Person class, 
+which has two member variables, name and ssn.
+
+
+class Person
+{
+public:
+         Person ():name(" " ), ssn (0){}
+         Person(string n, int s):name(n), ssn(s){}
+         Person(const Person &p):name(p.name),ssn(p.ssn){}
+         Person& operator =( const Person &p)
+         {
+              name = p.name;
+              ssn = p.ssn;
+         }
+private:
+        string name;
+        int ssn;
+};
+
+Give a deﬁnition for a class Employee that is a derived class of Person class. 
+The Employee class has two additional ﬁelds, EmpId, of type int and salary, of type double. 
+The Employee class has an additional member function printCheck 
+that takes no arguments and returns nothing. 
+Write the appropriate class deﬁnition. You do not need to provide the function deﬁtions, 
+just the class deﬁnition
+
+
+class Employee: public Person{
+public:
+void printCheck();
+
+private:
+int EmpID;
+double salary;
+
+};
+
+
+19. Consider the Question-18. Write the deﬁnition of the default constructor of Employee class.
+
+
+20. Consider the Question-18. Write the deﬁnition of the assignment operator overloading the Employee class.
+
+
+21. Consider the Question-18. Write the deﬁnition of the copy constructor of the Employee class
+
+class Employee: public Person{
+public:
+void printCheck();
+Employee(); // default with no argument
+Employee(int = 0); // default with one default argument
+
+Employee& operator = (const Employee & emp); // assignment overloading operator
+Employee(const Employee& object); //Copy constructor
+
+private:
+int EmpID;
+double salary;
+
+};
+
+
+
+
+
+
+
+
+
+
+
